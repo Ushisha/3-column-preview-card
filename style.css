@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  /* primary */
+  --color-sedans: hsl(31, 77%, 52%);
+  --color-suvs: hsl(184, 100%, 22%);
+  --color-luxury: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --paragraph-color: hsla(0, 0%, 100%, 0.75);
+  --Very-light--gray: hsl(0, 0%, 95%);
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+.wrapper {
+  width: 330px;
+  height: 1350px;
+  display: flex;
+  flex-direction: column;
+  margin: 80px auto;
+}
+
+.card-container {
+  width: 330px;
+  height: 430px;
+  padding: 50px;
+}
+
+h1 {
+  color: var(--Very-light--gray);
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+p {
+  color: var(--paragraph-color);
+  line-height: 2;
+  margin-bottom: 0;
+}
+.btn {
+  border-radius: 25px;
+  padding: 1em 2.5em;
+  border: none;
+  outline: none;
+  margin: 2em 0em;
+  cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
+}
+.btn:hover {
+  color: var(--Very-light--gray);
+  background-color: transparent;
+  border: 1px solid var(--Very-light--gray);
+}
+.btn-sedans {
+  color: var(--color-sedans);
+}
+
+.btn-suvs {
+  color: var(--color-suvs);
+}
+.btn-luxury {
+  color: var(--color-luxury);
+}
+.sedans {
+  background-color: var(--color-sedans);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.suvs {
+  background-color: var(--color-suvs);
+}
+
+.luxury {
+  background-color: var(--color-luxury);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+  }
+  .card-container {
+    width: 300px;
+    height: 500px;
+    padding: 50px;
+  }
+  .sedans {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+  .luxury {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .btn-container {
+    margin-top: 3em;
+  }
+}
